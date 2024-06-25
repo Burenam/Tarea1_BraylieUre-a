@@ -59,7 +59,7 @@ public class AuthRestController {
         return ResponseEntity.ok(loginResponse);
     }
 
-    @PostMapping("/signup")
+    /*@PostMapping("/signup")
     public ResponseEntity<?> registerUser(@RequestBody User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         Optional<Role> optionalRole = roleRepository.findByName(RoleEnum.USER);
@@ -70,6 +70,6 @@ public class AuthRestController {
         user.setRole(optionalRole.get());
         User savedUser = userRepository.save(user);
         return ResponseEntity.ok(savedUser);
-    }
+    }*/
 
 }

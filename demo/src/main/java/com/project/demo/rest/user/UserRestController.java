@@ -21,7 +21,7 @@ public class UserRestController {
     private PasswordEncoder passwordEncoder;
 
     @GetMapping
-    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
+    @PreAuthorize("hasAnyRole('USER', 'SUPER_ADMIN_ROLE')")
     public List<User> getAllUsers() {
         return UserRepository.findAll();
     }
